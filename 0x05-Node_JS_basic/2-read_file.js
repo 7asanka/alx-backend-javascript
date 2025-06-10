@@ -1,10 +1,5 @@
 const fs = require('fs');
 
-/**
- * Reads and counts students from a CSV database file.
- * Logs total students and counts by field with names.
- * @param {string} path - The file path to the database CSV.
- */
 function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf-8').split('\n').filter(line => line.trim() !== '');
